@@ -23,10 +23,24 @@ Generator.prototype.getWords = function(){
 };
 
 Generator.prototype.generate = function(currWord,lettersLeft){
+  if(currWord === undefined){
+    currWord ='';
+    lettersLeft=this.obj;
+  }
+
   if(this.dictionary.indexOf(currWord)!==-1){
     this.validWords.push(currWord);
   }
+
+  for(var key in lettersLeft){
+    console.log(key);
+  }
+
+
+
+
   return this.validWords;
+  }
 
 
 

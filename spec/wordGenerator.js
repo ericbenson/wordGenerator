@@ -22,7 +22,7 @@ describe('wordGenerator()', function () {
   });
 
   it('adds words to dictionary', function () {
-    expect(wordGenerator.generate('zach')).to.equal(['zach']);
+    expect(wordGenerator.generate('zach')[0]).to.equal('zach');
   });
 
   it('does something else', function () {
